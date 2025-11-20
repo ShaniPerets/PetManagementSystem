@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PetManagementSystem
 {
@@ -16,6 +17,18 @@ namespace PetManagementSystem
             : base(name, age,"Dog")
         {
             this.breed = breed;
+        }
+
+        //Empty Constructor - Overloading
+        public Dog() : base("Unknown", 0, "Dog")
+        {
+            this.breed = "Unknown";
+        }
+
+        //Read-only properties that safely provide access to the dog's breed
+        public string GetBreed()
+        {
+            return this.breed;
         }
 
         // Implementation of the abstract sound behavior for dogs

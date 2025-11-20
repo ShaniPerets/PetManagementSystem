@@ -17,13 +17,25 @@ namespace PetManagementSystem
             this.color = color;
         }
 
+        //Empty Constructor - Overloading
+        public Cat() : base("Unknown", 0, "Cat")
+        {
+            this.color = "Unknown";
+        }
+
+        //Read-only properties that safely provide access to the cat's color
+        public string GetColor()
+        {
+            return this.color;
+        }
+
         // Implementation of the abstract sound behavior for cats
         public override string MakeSound()
         {
            return "Cats Meow";
         }
 
-        // Implementation of the abstract eating behavior for dogs
+        // Implementation of the abstract eating behavior for cats
         public override string Eat()
         {
             return "Cats eat cat food";
