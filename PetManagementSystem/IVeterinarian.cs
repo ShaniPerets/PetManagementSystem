@@ -12,11 +12,11 @@ namespace PetManagementSystem
     public interface IVeterinarian
     {
         // Returns the veterinarian's name.
-        string GetName();
+        public string GetName();
 
 
         // Performs an examination of the given pet.
         // Each implementing class can define its own examination logic.
-        string ExaminePet(Pet pet);
+        public string ExaminePet(Pet pet);
     }
 }
